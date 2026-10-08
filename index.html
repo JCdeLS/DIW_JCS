@@ -1,9 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Alumno</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda Warhammer 40K</title>
+
+  <!-- Fuente de iconos Material Symbols Outlined -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0&icon_names=shield,dark_mode,token" rel="stylesheet">
+  <!-- Importación de TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Importar hoja de estilos CSS -->
+  <link rel="stylesheet" href="estilo.css">
 </head>
+
 <body>
-    <h1>Jorge Cadenas de Llano Serrano</h1>
+  
+  <!-- Barra superior -->
+  <ul class="barra-superior">
+    <li>
+      <button id="cambiar-tema" class="boton-tema" type="button">
+        <span class="material-symbols-outlined">dark_mode</span>
+      </button>
+    </li>
+  </ul>
+
+
+  <!-- Centrado con Tailwind (place-content-center)-->
+  <header class="grid place-content-center text-center h-60 gap-4">
+    <h1 class="titulo">FORJA DEL EMPERADOR</h1>
+    <p class="subtitulo font-effect-fire">
+      <span class="material-symbols-outlined">shield</span> 
+      Tienda oficial del Imperio
+    </p>
+    <!-- Script para cambiar de tema -->
+    <script>
+      const toggleBtn = document.getElementById('cambiar-tema');
+
+      toggleBtn.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+      });
+    </script>
+  </header>
+
+  <main>
+
+    <!-- 8. DISPLAY: grid en columnas. Con Tailwind: "grid grid-cols-1 sm:grid-cols-3 gap-4" -->
+    <section>
+      <h2 class="seccion">Ejercitos pregenerados</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-4">
+        <div class="tarjeta">
+          <h3>Adeptus Astartes</h3>
+          <p><span class="material-symbols-outlined">token</span>  Los hijos del Emperador</p>
+        </div>
+        <div class="tarjeta">
+          <h3>Adeptus Custodes</h3>
+          <p><span class="material-symbols-outlined">token</span>  Los defensores del Trono Dorado</p>
+        </div>
+        <div class="tarjeta">
+          <h3>Adeptus Sororitas</h3>
+          <p><span class="material-symbols-outlined">token</span>  El brazo armado de la Iglesia</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="seccion"">Precios</h2>
+      <!-- 6. Div con overflow-x: auto → scroll horizontal en móvil -->
+      <div style="overflow-x: auto;" class="my-4">
+        <table>
+          <tr><th>Ejercito</th><th>Puntos</th><th>Precio</th></tr>
+          <tr><td>Adeptus Astartes</td><td>1000 (Incursión)</td><td>39,90 €</td></tr>
+          <tr><td>Adeptus Custodes</td><td>3000 (Onslaught)</td><td>34,50 €</td></tr>
+          <tr><td>Adeptus Sororitas</td><td>2000 (Strike Force)</td><td>29,90 €</td></tr>
+        </table>
+      </div>
+    </section>
+    
+
+  </main>
+  <footer>
+    <p>Contacto: cadenasdellanojorge@gmail.com</p>
+  </footer>
 </body>
 </html>

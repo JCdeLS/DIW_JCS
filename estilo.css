@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,600,700&effect=fire');
+
+/* Reseteo CSS */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+body { line-height: 1.5; -webkit-font-smoothing: antialiased; }
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* Modo claro on RGB */
+:root {
+    --fondo: rgb(233, 231, 231);
+    --tarjeta: rgb(255, 255, 255);
+    --texto: rgb(22, 22, 22);
+    --acento: rgb(187, 9, 22); 
+    --barra_nav: rgb(141, 129, 232);   
+}
+
+/* Modo oscuro con OKLCH */
+body.dark-mode{
+    --fondo: oklch(0.2 0.02 260);
+    --tarjeta: oklch(0.27 0.03 260);
+    --texto: oklch(0.95 0 0);
+    --acento: oklch(0.75 0.15 85); 
+    --barra_nav: oklch(0.44 0.26 272); 
+}
+
+
+body { 
+    background-color: var(--fondo); 
+    color: var(--texto); 
+}
+
+/* Texto de título con degradado (la intención era que pareciese que el subtítulo está quemando el título */
+.titulo {
+    font-family: "Crimson Text", serif;
+    font-size: 3rem;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 4px;
+    background: linear-gradient(to top, gold, rgb(224, 170, 21), red);
+    background-clip: text;
+    color: transparent;
+}
+
+.subtitulo {
+    font-family: "Crimson Text", serif;
+    font-size: 1rem;
+    font-weight: 1200;
+    font-style: normal;
+    letter-spacing: 2px;
+    background-clip: text;
+    color: transparent;
+}
+
+.seccion {
+    font-family: "Crimson Text", serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--acento);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+h3 {
+    font-family: "Crimson Text", serif;
+    font-weight: 1000;
+    font-style: normal;
+    color: var(--acento);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.barra-superior {
+    list-style-type: none;
+    margin: 0;
+    padding: 14px 16px;
+    overflow: hidden;
+    background-color: var(--barra_nav);
+}
+
+.barra-superior li {
+    float: right;
+}
+
+p {
+    font-family: "Crimson Text", serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.material-symbols-outlined { 
+    vertical-align: text-bottom; 
+}
+
+
+main { 
+    max-width: 90%; 
+    margin: 0 auto;
+    padding: 1rem; 
+}
+
+.tarjeta { 
+    background-color: var(--tarjeta); 
+    padding: 1rem; 
+    border-radius: 8px; 
+}
+
+
+table { 
+    border-collapse: collapse; 
+    font-family: "Crimson Text", serif;
+    width: 100%;
+    min-width: 300px; 
+}
+
+th, td { 
+    width: 20%;
+    padding: 0.5rem; 
+    text-align: center;
+}
+
+
+th {
+    font-family: "Crimson Text", serif;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: var(--barra_nav);
+}
+
+tr:nth-child(even) { 
+    background-color:
+    rgba(128, 128, 128, 0.15); 
+}
+
+
+footer {
+    font-family: "Crimson Text", serif;
+    text-align: right;
+    padding: 10px;
+    background-color: var(--barra_nav);
+    color: var(--texto);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
