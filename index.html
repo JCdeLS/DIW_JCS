@@ -33,18 +33,12 @@
       Tienda oficial del Imperio
     </p>
     <!-- Script para cambiar de tema -->
-    <script>
-      const toggleBtn = document.getElementById('cambiar-tema');
-
-      toggleBtn.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-      });
-    </script>
+    <script src="modo_oscuro.js"></script>
   </header>
 
   <main>
 
-    <!-- 8. DISPLAY: grid en columnas. Con Tailwind: "grid grid-cols-1 sm:grid-cols-3 gap-4" -->
+    <!-- Grid en columnas con Tailwind: "grid grid-cols-1 sm:grid-cols-3 gap-4" -->
     <section>
       <h2 class="seccion">Ejercitos pregenerados</h2>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-4">
@@ -65,7 +59,6 @@
 
     <section>
       <h2 class="seccion"">Precios</h2>
-      <!-- 6. Div con overflow-x: auto → scroll horizontal en móvil -->
       <div style="overflow-x: auto;" class="my-4">
         <table>
           <tr><th>Ejercito</th><th>Puntos</th><th>Precio</th></tr>
