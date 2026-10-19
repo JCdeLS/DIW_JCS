@@ -33,11 +33,20 @@
       Tienda oficial del Imperio
     </p>
     <!-- Script para cambiar de tema -->
-    <script src="modo_oscuro.js"></script>
+    <script src="./scripts/modo_oscuro.js"></script>
   </header>
 
-  <main>
+  <div id="nav-lat" class="sidenav">
+    <a href="./scripts/nav.js" class="btn_nav">&times;</a>
+    <a href="#">Novedades</a>
+    <a href="#">Ejercitos Pregenerados</a>
+    <a href="#">Unidades</a>
+    <a href="#">Historia</a>
+  </div>
 
+  <button id="cambiar-tema" class="btn_open_nav" type="button">>Abrir Nav</button>
+
+  <main>
     <!-- Grid en columnas con Tailwind: "grid grid-cols-1 sm:grid-cols-3 gap-4" -->
     <section>
       <h2 class="seccion">Ejercitos pregenerados</h2>
