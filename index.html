@@ -11,27 +11,22 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Importar hoja de estilos CSS -->
   <link rel="stylesheet" href="estilo.css">
+  <script src="./scripts/modo_oscuro.js" defer></script>
+  <script src="./scripts/nav.js" defer></script>
 </head>
 
 <body>
-  
-  <!-- Barra superior -->
-  <ul class="barra-superior">
-    <li>
-      <button id="cambiar-tema" class="boton-tema" type="button">
-        <span class="material-symbols-outlined">dark_mode</span>
-      </button>
-    </li>
-  </ul>
-
-
-  <!-- Centrado con Tailwind (place-content-center)-->
   <header>
-    <!-- Script para cambiar de tema -->
-    <script src="./scripts/modo_oscuro.js" defer></script>
-    <script src="./scripts/nav.js" defer></script>
+    <!-- Barra superior -->
+    <ul class="barra-superior">
+      <li>
+        <button id="cambiar-tema" class="boton-tema" type="button">
+          <span class="material-symbols-outlined">dark_mode</span>
+        </button>
+      </li>
+    </ul>
   </header>
-
+ 
   <div id="nav-lat" class="sidenav">
     <a href="#" id="btn_nav">&times;</a>
     <a href="./Paginas/novedades.html">Novedades</a>
@@ -43,6 +38,7 @@
   <button id="btn_open_nav" type="button">Abrir Nav</button>
 
   <main>
+    <!-- Centrado con Tailwind (place-content-center)-->
     <div id="titulo" class="grid place-content-center text-center h-60 gap-4">
       <h1 class="titulo">FORJA DEL EMPERADOR</h1>
       <p class="subtitulo font-effect-fire">
@@ -70,7 +66,7 @@
     </section>
 
     <section>
-      <h2 class="seccion"">Precios</h2>
+      <h2 class="seccion">Precios</h2>
       <div style="overflow-x: auto;" class="my-4">
         <table>
           <tr><th>Ejercito</th><th>Puntos</th><th>Precio</th></tr>

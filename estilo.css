@@ -122,7 +122,6 @@ th, td {
     text-align: center;
 }
 
-
 th {
     font-family: "Crimson Text", serif;
     padding-top: 12px;
@@ -135,7 +134,6 @@ tr:nth-child(even) {
     background-color:
     rgba(128, 128, 128, 0.15); 
 }
-
 
 footer {
     font-family: "Crimson Text", serif;
@@ -191,7 +189,7 @@ main {
     max-width: 90%; 
     margin: 0 auto;
     padding: 1rem; 
-    transition: margin-left .5s;
+    transition: padding-left .5s;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
