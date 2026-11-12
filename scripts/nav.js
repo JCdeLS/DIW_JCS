@@ -5,11 +5,15 @@ const abrirNav = document.getElementById('btn_open_nav')
 cerrarNav.addEventListener('click', ()=>{
   document.getElementById("nav-lat").style.width = "0";
   document.querySelector("main").style.paddingLeft = "0";
+  document.querySelector("header").style.opacity = 1;
+  document.querySelector("main").style.opacity = 1;
 });
 
 abrirNav.addEventListener('click', ()=>{
   document.getElementById("nav-lat").style.width = "250px";
   document.querySelector("main").style.paddingLeft = "250px";
+  document.querySelector("header").style.opacity = 0.5;
+  document.querySelector("main").style.opacity = 0.5;
 });
 
 window.addEventListener('pagehide', () => {

@@ -15,10 +15,19 @@
   <script src="./scripts/nav.js" defer></script>
 </head>
 
+
 <body>
+  <div id="nav-lat" class="sidenav">
+    <a href="#" id="btn_nav">&times;</a>
+    <a href="./Paginas/novedades.html"><b>Novedades</b></a>
+    <a href="./Paginas/pregens.html"><b>Ejercitos Pregenerados</b></a>
+    <a href="./Paginas/unidades.html"><b>Unidades</b></a>
+    <a href="./Paginas/historia.html"><b>Historia</b></a>
+  </div> 
   <header>
     <!-- Barra superior -->
     <ul class="barra-superior">
+      <button id="btn_open_nav" type="button">Abrir Nav</button>
       <li>
         <button id="cambiar-tema" class="boton-tema" type="button">
           <span class="material-symbols-outlined">dark_mode</span>
@@ -26,17 +35,6 @@
       </li>
     </ul>
   </header>
- 
-  <div id="nav-lat" class="sidenav">
-    <a href="#" id="btn_nav">&times;</a>
-    <a href="./Paginas/novedades.html">Novedades</a>
-    <a href="./Paginas/pregens.html">Ejercitos Pregenerados</a>
-    <a href="./Paginas/unidades.html">Unidades</a>
-    <a href="./Paginas/historia.html">Historia</a>
-  </div>
-
-  <button id="btn_open_nav" type="button">Abrir Nav</button>
-
   <main>
     <!-- Centrado con Tailwind (place-content-center)-->
     <div id="titulo" class="grid place-content-center text-center h-60 gap-4">

@@ -24,6 +24,7 @@ p, h1, h2, h3, h4, h5, h6 {
     --texto: rgb(22, 22, 22);
     --acento: rgb(187, 9, 22); 
     --barra_nav: rgb(141, 129, 232);   
+    --tiempo_trans: 0.5s;
 }
 
 /* Modo oscuro con OKLCH */
@@ -146,31 +147,32 @@ footer {
     width: 100%;
 }
 
-/* The side navigation menu */
+/* Menu de navegación */
 .sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
+    height: 100%; 
+    width: 0; 
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    background-color: #111; /* Black*/
+    background-color: var(--barra_nav); 
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
+    padding-top: 20px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
-/* The navigation menu links */
+/* Estilo de los enlances */
 .sidenav a {
     padding: 8px 8px 8px 32px;
+    font-family: "Crimson Text", serif;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: var(--texto);
     display: block;
     transition: 0.3s;
 }
 
-/* When you mouse over the navigation links, change their color */
+/* Cambio de color con hover */
 .sidenav a:hover {
     color: #f1f1f1;
 }
@@ -184,16 +186,21 @@ footer {
     margin-left: 50px;
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+/* Estilo del main */
 main {
     max-width: 90%; 
     margin: 0 auto;
     padding: 1rem; 
-    transition: padding-left .5s;
+    transition: padding-left var(--tiempo_trans), opacity var(--tiempo_trans);
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+/* Transición para el header */
+header{
+    transition: opacity var(--tiempo_trans);
+}
+
+/* Posible tamaño para pantallas pequeñas? 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
-}
+}*/
