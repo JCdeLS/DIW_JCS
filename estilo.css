@@ -145,20 +145,21 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    transition: opacity var(--tiempo_trans);
 }
 
 /* Menu de navegación */
 .sidenav {
     height: 100%; 
     width: 0; 
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
+    position: fixed;
+    z-index: 1;
+    top: 0;
     left: 0;
     background-color: var(--barra_nav); 
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    overflow-x: hidden; 
+    padding-top: 20px;
+    transition: var(--tiempo_trans); 
 }
 
 /* Estilo de los enlances */
@@ -176,6 +177,10 @@ footer {
 .sidenav a:hover {
     color: #f1f1f1;
 }
+
+/*.sidenav a:visited {
+    color: #00ff37;
+}*/
 
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
@@ -197,6 +202,10 @@ main {
 /* Transición para el header */
 header{
     transition: opacity var(--tiempo_trans);
+}
+
+tr:first-child{
+    color: green;
 }
 
 /* Posible tamaño para pantallas pequeñas? 
